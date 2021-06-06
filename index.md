@@ -39,7 +39,7 @@ Having trouble with Pages? Check out our [documentation](https://docs.github.com
 This is my test.
 
 <script src="https://utteranc.es/client.js"
-        repo="[ENTER REPO HERE]"
+        repo="JScalpel"
         issue-term="pathname"
         theme="github-light"
         crossorigin="anonymous"
