@@ -83,7 +83,7 @@ class Pages:
         self.driver = driver
     def iter_pages(self):
         self.total_pages = self.counting_pages()
-        self.curr_page = 1
+        self.curr_page = 0
         while self.curr_page < self.total_pages:
             page = self.get_page()
             if page is None:
