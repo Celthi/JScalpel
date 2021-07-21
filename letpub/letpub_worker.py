@@ -83,28 +83,37 @@ class Pages:
         self.driver = driver
     def iter_pages(self):
         self.total_pages = self.counting_pages()
-        self.curr_page = 0
-        while self.curr_page < self.total_pages:
+        logging.info('Total pages: {}'.format(self.total_pages))
+
+        self.curr_page_num = 0
+        while self.curr_page_num < self.total_pages:
             page = self.get_page()
             if page is None:
                 break
-            self.curr_page += 1
+            self.curr_page_num += 1
             yield page
     def get_page(self):
-        page_xpath = '//*[@id="dict"]/table/tbody/tr[1]/td/a[{}]'.format(self.curr_page+2)
-        page_list = self.driver.find_elements_by_xpath(page_xpath)
-        if len(page_list) > 0:
-            return page_list[0]
-        return None
+        page_xpath = '//*[@id="dict"]/table/tbody/tr[1]/td/a[{}]'.format(self.curr_page_num + 2)
+        page = self.driver.find_element_by_xpath(page_xpath)
+        return page
+
+    def extract_total_pages(self):
+        total_xpath = '//*[@id="dict"]/center/div'
+        pages = self.driver.find_element_by_xpath(total_xpath)
+        #'搜索条件匹配：106条相关记录！每页显示10条，当前第1页，共11页。结果最多显示20页，如果匹配结果太多，请您进一步精炼筛选条件。 查看VIP权益\n下载Excel'
+        pat = re.compile(r'搜索条件匹配：\d{0,10}条相关记录！每页显示\d{0,10}条，当前第\d{0,11}页，共(?P<total>\d{0,10})页')
+        m = pat.match(pages.text)
+        return int(m.group('total')) if m else -1
 
     def counting_pages(self):
-        pages = self.driver.find_elements_by_xpath('//*[@id="dict"]/center/div/b')
         tries = 0
-        while len(pages) == 0 and tries < 10:
+        while tries < 50:
             logging.info('counting pages...')
-            pages = self.driver.find_elements_by_xpath('//*[@id="dict"]/center/div/b')
+            total = self.extract_total_pages()
+            if total != -1:
+                return total
             tries += 1
-        return int(pages[0].text)
+        return 0
 if __name__ == '__main__':
     logging.info('start crawling...')
     capabilities = webdriver.DesiredCapabilities.CHROME
