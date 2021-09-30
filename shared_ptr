@@ -1,1 +1,61 @@
-<mxfile host="app.diagrams.net" modified="2021-09-30T12:31:45.357Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36" version="15.2.5" etag="Nlfq8D5xfNQei_1w0I8Y" type="github"><diagram id="92efCzzSaFQBYWxa9SjZ">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2021-09-30T12:43:46.558Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36" etag="khFOeI09o7qWnkMwsq23" version="15.2.5" type="github">
+  <diagram id="92efCzzSaFQBYWxa9SjZ" name="Page-1">
+    <mxGraphModel dx="1298" dy="811" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="RBsPi_v3RORcWQYBwe-8-2" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="100" y="300" width="130" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="RBsPi_v3RORcWQYBwe-8-3" value="data pointer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="105" y="300" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="RBsPi_v3RORcWQYBwe-8-4" value="data" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="425" y="290" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="RBsPi_v3RORcWQYBwe-8-5" value="control block pointer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="105" y="360" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="RBsPi_v3RORcWQYBwe-8-7" value="" style="endArrow=classic;html=1;entryX=0;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="RBsPi_v3RORcWQYBwe-8-3" target="RBsPi_v3RORcWQYBwe-8-4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="280" y="320" as="sourcePoint" />
+            <mxPoint x="330" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RBsPi_v3RORcWQYBwe-8-8" value="" style="endArrow=classic;html=1;entryX=0;entryY=0;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="RBsPi_v3RORcWQYBwe-8-5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="340" y="410" as="sourcePoint" />
+            <mxPoint x="430" y="390" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RBsPi_v3RORcWQYBwe-8-9" value="control block" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="445" y="580" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="RBsPi_v3RORcWQYBwe-8-10" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="430" y="390" width="120" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="RBsPi_v3RORcWQYBwe-8-11" value="data pointer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="430" y="390" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="RBsPi_v3RORcWQYBwe-8-12" value="" style="endArrow=classic;html=1;entryX=0.992;entryY=0.117;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="RBsPi_v3RORcWQYBwe-8-11" target="RBsPi_v3RORcWQYBwe-8-4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="610" y="380" as="sourcePoint" />
+            <mxPoint x="660" y="330" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="630" y="350" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RBsPi_v3RORcWQYBwe-8-13" value="shared count" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="430" y="450" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="RBsPi_v3RORcWQYBwe-8-14" value="weak count" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="430" y="510" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="RBsPi_v3RORcWQYBwe-8-16" value="&lt;font style=&quot;font-size: 15px&quot;&gt;栈&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="100" y="600" width="30" height="20" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
